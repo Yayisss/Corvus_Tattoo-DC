@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+{% block content %}
+  <main class="px-3">
+    <h1>Corvus tattoo</h1>
+
+    {% if user.is_authenticated %}
+
+      <p class="lead">{% if user.is_authenticated %}Bienvenido {{ user.username | upper }}, {% endif %}.Por ser un nuevo usuario, tendrá un 20% de descuento en su primer cita hecha online !!!</p>
+
+    {% else %}
+
+      <p class="lead">Nuestra empresa se especializa en todo tipo de tatuajes para lograr darle el mejor resultado a cada cliente.</p>
+
+    {% endif %}
+
+    
+  </main>
+{% endblock %}
